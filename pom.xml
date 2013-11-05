@@ -15,7 +15,7 @@
     <!-- Artifact Configuration -->
     <groupId>org.jboss.arquillian.container</groupId>
     <artifactId>arquillian-parent-was</artifactId>
-    <version>1.0.0.Final-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Arquillian Container Parent WebSphere AS</name>
     <description>WebSphere AS Container integrations for the Arquillian Project</description>
@@ -67,7 +67,6 @@
         <profile>
             <id>all</id>
             <modules>
-                <module>was-remote-7</module>
                 <module>was-embedded-8</module>
                 <module>was-remote-8</module>
                 <module>wlp-managed-8.5</module>

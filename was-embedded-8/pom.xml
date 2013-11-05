@@ -22,7 +22,7 @@
     <!-- Properties -->
 
     <properties>
-        <was_home>${env.WAS8_HOME}</was_home>
+        <was_home>/opt/IBM/WebSphere/AppServer</was_home>
         <version.ejb_api>3.1.0</version.ejb_api>
     </properties>
 
@@ -30,7 +30,7 @@
         <profile>
             <id>build-server</id>
             <properties>
-                <was_home>${WAS8_HOME}</was_home>
+                <was_home>/opt/IBM/WebSphere/AppServer</was_home>
             </properties>
         </profile>
     </profiles>
