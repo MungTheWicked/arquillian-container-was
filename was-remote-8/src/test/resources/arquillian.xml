@@ -13,7 +13,7 @@
 			<property name="securityEnabled">true</property>
 			<property name="username">wasadmin</property>
 			<property name="password">password</property>
- 			<property name="sslTrustStore">/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/etc/DummyClientTrustFile.jks</property>
+ 			<property name="sslTrustStore">${env.WAS8_HOME}\profiles\AppSrv01\etc\DummyClientTrustFile.jks</property>
                         <property name="sslTrustStorePassword">WebAS</property>
 		</configuration>
 	</container>

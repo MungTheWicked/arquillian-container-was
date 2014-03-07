@@ -23,7 +23,7 @@
     <!-- Properties -->
     <properties>
         <!-- Versioning -->
-        <version.arquillian_core>1.0.0.Final</version.arquillian_core>
+        <version.arquillian_core>1.1.1.Final</version.arquillian_core>
 
         <!-- override from parent -->
         <maven.compiler.argument.target>1.5</maven.compiler.argument.target>
@@ -78,7 +78,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <modules>
-                <module>wlp-managed-8.5</module>
+                <module>was-remote-8</module>
             </modules>
         </profile>
     </profiles>

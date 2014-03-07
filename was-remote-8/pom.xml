@@ -22,15 +22,15 @@
     <!-- Properties -->
 
     <properties>
-        <was_home>/opt/IBM/WebSphere/AppServer</was_home>
-        <version.ejb_api>3.1.0</version.ejb_api>
+        <was_home>${env.WAS8_HOME}</was_home>
+        <version.jboss-spec-ejb3.1>1.0.2.Final</version.jboss-spec-ejb3.1>
     </properties>
 
     <profiles>
         <profile>
             <id>build-server</id>
             <properties>
-                <was_home>/opt/IBM/WebSphere/AppServer</was_home>
+                <was_home>${env.WAS8_HOME}</was_home>
             </properties>
         </profile>
     </profiles>
@@ -106,7 +106,7 @@
             <artifactId>was-public</artifactId>
             <version>8.0.0</version>
             <scope>system</scope>
-            <systemPath>${was_home}/dev/was_public.jar</systemPath>
+            <systemPath>${WAS8_HOME}/dev/was_public.jar</systemPath>
         </dependency>
 
         <!-- Testing -->
@@ -120,13 +120,14 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+            <version>4.11</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
-            <groupId>org.jboss.ejb3</groupId>
-            <artifactId>jboss-ejb3-api</artifactId>
-            <version>${version.ejb_api}</version>
+            <groupId>org.jboss.spec.javax.ejb</groupId>
+            <artifactId>jboss-ejb-api_3.1_spec</artifactId>
+            <version>${version.jboss-spec-ejb3.1}</version>
             <scope>test</scope>
         </dependency>
 
@@ -137,7 +138,7 @@
             <artifactId>ws-admin-client</artifactId>
             <version>8.0.0</version>
             <scope>system</scope>
-            <systemPath>${was_home}/runtimes/com.ibm.ws.admin.client_8.0.0.jar</systemPath>
+            <systemPath>${WAS8_HOME}/runtimes/com.ibm.ws.admin.client_8.0.0.jar</systemPath>
         </dependency>
 
         <dependency>
@@ -145,7 +146,7 @@
             <artifactId>jgss-provider</artifactId>
             <version>8.0.0</version>
             <scope>system</scope>
-            <systemPath>${was_home}/java/jre/lib/ibmjgssprovider.jar</systemPath>
+            <systemPath>${WAS8_HOME}/java/jre/lib/ibmjgssprovider.jar</systemPath>
         </dependency>
     </dependencies>
 </project>

@@ -22,7 +22,7 @@
     <!-- Properties -->
 
     <properties>
-        <was_home>/opt/IBM/WebSphere/AppServer</was_home>
+        <was_home>${env.WAS8_HOME}</was_home>
         <version.ejb_api>3.1.0</version.ejb_api>
     </properties>
 
@@ -30,7 +30,7 @@
         <profile>
             <id>build-server</id>
             <properties>
-                <was_home>/opt/IBM/WebSphere/AppServer</was_home>
+                <was_home>${env.WAS8_HOME}</was_home>
             </properties>
         </profile>
     </profiles>
@@ -119,9 +119,9 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+            <version>4.11</version>
             <scope>test</scope>
         </dependency>
 
     </dependencies>
 </project>
-
